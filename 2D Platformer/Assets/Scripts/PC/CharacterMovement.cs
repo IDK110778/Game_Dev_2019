@@ -14,10 +14,13 @@ public class CharacterMovement : MonoBehaviour {
 	public LayerMask whatIsGround;
 	private bool grounded;
 	private bool doubleJump;
-
+	public Animator animator;
 	// Use this for initialization  
 	void Start () {
-		
+		animator.SetBool("isWalking",false);
+		animator.SetBool("isJumping",false);
+
+
 	}
 
 
@@ -44,10 +47,19 @@ public class CharacterMovement : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
 		}
+
+		else if(Input.GetKey (KeyCode.D)){
+			animator.SetBool("isWalking",false);
+		}
 		if(Input.GetKey (KeyCode.A)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
 		}
+
+		else if(Input.GetKey (KeyCode.A)){
+			animator.SetBool("isWalking",false);
+		}
+
 		if(GetComponent<Rigidbody2D>().velocity.x>0){
 			transform.localScale = new Vector3(0.2f,0.2f,1f);
 		}
@@ -58,5 +70,6 @@ public class CharacterMovement : MonoBehaviour {
 
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+		animator.SetBool("isJumping",true);
 	}
 }
