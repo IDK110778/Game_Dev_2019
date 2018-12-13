@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1a893da289044c8af91425ef43b529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 1638447207}
+  LevelManager: {fileID: 0}
 --- !u!114 &21931071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3620,7 +3620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551fa882148e04e60a5241a4e6b0a65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1638447206}
+  Player: {fileID: 0}
   isFollowing: 0
   xOffset: 0
   yOffset: 0
@@ -3766,7 +3766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1a893da289044c8af91425ef43b529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 1638447207}
+  LevelManager: {fileID: 0}
 --- !u!61 &949983801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5546,9 +5546,6 @@ GameObject:
   - component: {fileID: 1638447204}
   - component: {fileID: 1638447203}
   - component: {fileID: 1638447202}
-  - component: {fileID: 1638447206}
-  - component: {fileID: 1638447207}
-  - component: {fileID: 1638447208}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -5663,56 +5660,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1638447206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1638447201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c64ffbd0e67470f8e7948c8febdb91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  JumpHeight: 10
-  groundCheck: {fileID: 211293650}
-  groundCheckRadius: 0.1
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 16
---- !u!114 &1638447207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1638447201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf02ae89f53640c19d0928ed1923611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 2140006926}
-  PC: {fileID: 1638447202}
-  DeathParticle: {fileID: 1691881021826082, guid: e872bfeee897f4b98a3b84923fd0e46e,
-    type: 2}
-  RespawnParticle: {fileID: 1116096796900412, guid: 12816bd2112504ef39f59311cc36d39f,
-    type: 2}
-  RespawnDelay: 1
-  PointPenaltyOnDeath: 50
---- !u!114 &1638447208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1638447201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c37392690fd4d048a64c5d52c274c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirePoint: {fileID: 796288559}
-  Projectile: {fileID: 1686679551}
 --- !u!1 &1640631482
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,11 +5986,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1686679551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1032748246706454, guid: 79a5f076ad6404421a28d3e33e0f8bea,
-    type: 2}
-  m_PrefabInternal: {fileID: 1258625471}
 --- !u!1 &1807434287
 GameObject:
   m_ObjectHideFlags: 0
