@@ -18,8 +18,7 @@ public class DestroyFP : MonoBehaviour {
 			return;
 		
 
-		Destroy (gameObject)
-		}
+		Destroy(gameObject);		}
 
 	void OnBecameInvisible (){
 		Destroy (gameObject);

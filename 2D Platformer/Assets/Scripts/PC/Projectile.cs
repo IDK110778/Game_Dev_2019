@@ -47,4 +47,5 @@ public class Projectile : MonoBehaviour {
 		Instantiate(ProjectileParticle, transform.position, transform.rotation);
 		Destroy(gameObject)
 		}
+
 }
