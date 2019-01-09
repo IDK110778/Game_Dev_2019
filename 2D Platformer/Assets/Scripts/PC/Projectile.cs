@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		PC = GameObject.Find("PC");
 
-		EmemyDeath = Resources.Load("Prefab/Paricle System_Death") as GameObject;
+		EnemyDeath = Resources.Load("Prefab/Paricle System_Death") as GameObject;
 
 		ProjectileParticle = Resources.Load("Prefab/Particle System_Respawn") as GameObject;
 
@@ -43,9 +43,8 @@ public class Projectile : MonoBehaviour {
 	}
 
 		void OnCollisionEnter2D(Collider2D other){
-		
 		Instantiate(ProjectileParticle, transform.position, transform.rotation);
-		Destroy(gameObject)
-	}
+		Destroy(gameObject);
+		}
 
 }
